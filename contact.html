@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | The Ninth Wave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html"><img src="9342.jpg" alt="Logo"></a></div>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">The Captain</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 120px;">
+        <h1 class="gradient-text" style="text-align: center;">SEND SIGNAL.</h1>
+        <p style="text-align:center; color:#ccc; margin-bottom:40px;">Tell me where the ship is taking on water.</p>
+
+        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" style="width:100%; padding:15px; background:#111; border:1px solid #333; color:white;">
+                    <option>General Inquiry</option>
+                    <option>The Audit (Bridge)</option>
+                    <option>New Hire/Retention (Safety Net)</option>
+                    <option>Interim Management (Stabilizer)</option>
+                    <option>Workshop (The Lab)</option>
+                    <option>Buying the Playbook</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">What's the Glitch?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">TRANSMIT</button>
+        </form>
+    </div>
+
+    <footer><div class="container"><p class="copyright">&copy; 2025 The Ninth Wave.</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
