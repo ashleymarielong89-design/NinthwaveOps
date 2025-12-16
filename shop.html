@@ -4,49 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | The Ninth Wave</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo"><a href="index.html"><img src="9342.jpg" alt="Logo"></a></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">The Captain</a></li>
-                <li><a href="shop.html" class="active-link">Shop</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact</a></li>
-            </ul>
-            <div class="hamburger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+        <div class="logo">
+            <a href="index.html"><img src="9342.jpg" alt="Logo" class="nav-logo-img"></a>
+            <span class="brand-name"><a href="index.html">NINTH_WAVE_OPS</a></span>
         </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="protocols.html" class="nav-link">PROTOCOLS</a></li>
+            <li><a href="architect.html" class="nav-link">THE_ARCHITECT</a></li>
+            <li><a href="shop.html" class="nav-link" style="color:var(--accent);">SHOP</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
     </nav>
 
-    <div class="container" style="padding-top: 140px;">
-        <h1 class="gradient-text" style="text-align: center;">TOOLS FOR THE TRIP.</h1>
-        <p style="text-align:center; color:#ccc; margin-bottom:60px;">Resources to help you steer the ship.</p>
+    <section class="protocols" style="padding-top: 40px; min-height: 80vh;">
+        <div class="container">
+            <h2 class="section-title">REQUISITIONS</h2>
+            <div class="grid-container">
+                
+                <div class="card">
+                    <h3>REALITY ARCHITECTURE KIT (V1)</h3>
+                    <p style="color:#888; font-size:0.9rem; margin-bottom:10px;">[ DIGITAL DOWNLOAD ]</p>
+                    <p>The core framework for restructuring your operational reality. Includes the R-Protocol Audit templates.</p>
+                    <br>
+                    <a href="#" class="btn btn-outline" style="font-size:0.8rem;">COMING SOON</a>
+                </div>
 
-        <div class="shop-grid">
-            <div class="shop-item">
-                <h3>The Manager Playbook</h3>
-                <p class="price">$22.00</p>
-                <p>"What they should have given you on Day 1." A complete survival guide including the 'Friend vs Boss' script and delegation tactics.</p>
-                <a href="contact.html" class="btn-sm">BUY NOW</a>
-            </div>
-            
-            <div class="shop-item">
-                <h3>Buy The Captain a Coffee</h3>
-                <p class="price">Donation</p>
-                <p>Fuel the Navigator. If the free advice helped you survive the week, toss a coin to your Witcher.</p>
-                <a href="https://buymeacoffee.com/ninthwave" target="_blank" class="btn-sm">SEND COFFEE</a>
-            </div>
+                <div class="card">
+                    <h3>THE NINTH WAVE APP</h3>
+                    <p style="color:#888; font-size:0.9rem; margin-bottom:10px;">[ SOFTWARE ]</p>
+                    <p>Daily tracking for decision latency and resistance loops. Get on the Alpha testing list.</p>
+                    <br>
+                    <a href="mailto:commandcenter@ninthwaveoperations.com?subject=Waitlist" class="btn btn-outline" style="font-size:0.8rem;">JOIN WAITLIST</a>
+                </div>
 
-            <div class="shop-item">
-                <h3>Artifacts (Coming Soon)</h3>
-                <p class="price">--</p>
-                <p>Curated items for your office altar. Because boring walls kill vibes.</p>
-                <a href="#" class="btn-sm" style="opacity:0.5;">WAITLIST</a>
+                <div class="card highlight-card">
+                    <h3>CONSULTATION CREDIT</h3>
+                    <p style="color:#888; font-size:0.9rem; margin-bottom:10px;">[ SERVICE ]</p>
+                    <p class="highlight-text">>> 1 HOUR DEPLOYMENT</p>
+                    <p>Pre-purchase a single hour of Tactical Strategy. Direct access to The Architect.</p>
+                    <br>
+                    <a href="contact.html" class="btn btn-primary" style="font-size:0.8rem;">INQUIRE</a>
+                </div>
+
             </div>
         </div>
-    </div>
-    <footer><div class="container"><p class="copyright">&copy; 2025 The Ninth Wave Operations.</p></div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2025 The Ninth Wave Operations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
