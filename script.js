@@ -1,26 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. MOBILE MENU
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            hamburger.classList.toggle('toggle');
-        });
-    }
+const menuToggle = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
 
-    // 2. ACCORDION (SERVICES PAGE)
-    const acc = document.getElementsByClassName("accordion");
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
-        });
-    }
-});
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+        // This toggles the 'active' class which makes the menu appear/disappear
+        navMenu.classList.toggle('active');
+        
+        // Optional: Animate the hamburger bars if you want to get fancy later
+        menuToggle.classList.toggle('is-active');
+    });
+}
