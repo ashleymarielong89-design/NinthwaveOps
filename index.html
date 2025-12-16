@@ -3,78 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ninth Wave Operations</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>The Ninth Wave | Operational Architecture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo"><a href="index.html"><img src="9342.jpg" alt="Logo"></a></div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active-link">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">The Captain</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact</a></li>
-            </ul>
-            <div class="hamburger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+        <div class="logo">
+            <img src="9342.jpg" alt="The Ninth Wave Logo" class="nav-logo-img">
+            <span class="brand-name">NINTH_WAVE_OPS</span>
         </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#protocols" class="nav-link">PROTOCOLS</a></li>
+            <li><a href="#architect" class="nav-link">THE_ARCHITECT</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
     </nav>
 
     <header class="hero">
-        <div class="container hero-content">
-            <img src="9342.jpg" alt="The Ninth Wave" class="hero-logo">
-            
-            <h1 class="gradient-text">THE NINTH WAVE OPERATIONS.</h1>
-            <h2 class="sub-headline">Navigating the threshold between operational chaos and your business reality.</h2>
-            
-            <div class="btn-group">
-                <a href="about.html" class="btn">WHO ARE WE?</a>
-                <a href="services.html" class="btn">WHAT DO WE DO?</a>
+        <div class="hero-container">
+            <h1 class="glitch-text">DON'T JUST SURVIVE THE SIMULATION.<br>HACK IT.</h1>
+            <p class="hero-sub">Operational Architecture. Cognitive Protocol. Total Agency.</p>
+            <div class="cta-group">
+                <a href="contact.html" class="btn btn-primary">DEPLOY THE ARCHITECT</a>
+                <a href="#protocols" class="btn btn-outline">INITIATE PROTOCOLS</a>
             </div>
         </div>
     </header>
 
-    <section style="padding: 40px 0; background-color: #0f0f0f; border-bottom: 1px solid #222;">
+    <section class="teaser">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; font-family: 'Playfair Display', serif;">
-                <h3 style="font-size: 2rem; color: #fff; margin-bottom: 15px;">The Ninth Wave <span style="font-size: 1rem; color: #666; font-style: italic;">(n. Celtic Mythology)</span></h3>
+            <div class="terminal-box">
+                <p class="terminal-header">>> SYSTEM_STATUS: INITIALIZING...</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <p class="terminal-text">The Ninth Wave App & Reality Architecture Kits. <span class="blink">LOADING... [60%]</span></p>
+                <a href="mailto:commandcenter@ninthwaveoperations.com?subject=Join Waitlist" class="waitlist-link">[ JOIN_THE_WAITLIST ]</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="protocols" class="protocols">
+        <div class="container">
+            <h2 class="section-title">OPERATIONAL PROTOCOLS</h2>
+            <div class="grid-container">
                 
-                <div style="margin-bottom: 20px;">
-                    <span style="color: #00cccc; font-weight: bold; font-size: 1.2rem; margin-right: 10px;">1.</span>
-                    <span style="color: #ccc; font-family: 'Roboto', sans-serif;"><strong>The Threshold.</strong> The final barrier between the Ordinary World and the Otherworld. The ultimate challenge one must survive to reach transformation.</span>
+                <div class="card">
+                    <h3>01 // THE R-PROTOCOL</h3>
+                    <p>Cognitive Architecture to debug your team's operating system. We remove Resistance, install Resilience, and collapse the wave into Profit. Includes 9-Step Audit.</p>
                 </div>
 
-                <div>
-                    <span style="color: #00cccc; font-weight: bold; font-size: 1.2rem; margin-right: 10px;">2.</span>
-                    <span style="color: #ccc; font-family: 'Roboto', sans-serif;"><strong>The Business Reality.</strong> The wall of chaos you hit right before you scale. Most turn back. We are the Navigators that help you bridge the gap.</span>
+                <div class="card">
+                    <h3>02 // TACTILE PROTOTYPING</h3>
+                    <p>Spreadsheets lie. Physical models don't. We use <strong>Haptic Logic</strong> and raw materials to build 3D models of your bottlenecks, forcing invisible problems into the light.</p>
                 </div>
+
+                <div class="card">
+                    <h3>03 // SECTOR C (CANNABIS)</h3>
+                    <p>Specialized deployment for High-Risk/High-Regulation environments. METRC compliance, theft mitigation, and SOP architecture for the cannabis sector.</p>
+                </div>
+
+                <div class="card highlight-card">
+                    <h3>04 // TACTICAL DEPLOYMENT</h3>
+                    <p class="highlight-text">>> INTERIM OPS MANAGEMENT</p>
+                    <p>Insert The Architect directly into your chain of command to stabilize chaos. Available for Remote & Contract Ops.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="definition-section">
-        <div class="container">
-            <h2 class="section-title gradient-text" style="text-align:center;">THE REALITY CHECK.</h2>
-            <p style="text-align:center; margin-bottom: 40px; color:#ccc;">If you answer "Yes" to more than 3 of these, you are already underwater.</p>
-            
-            <div class="teaser-grid">
-                <div class="teaser-item"><span class="check">⚠</span> <p>Do you feel like you are babysitting adults instead of managing a team?</p></div>
-                <div class="teaser-item"><span class="check">⚠</span> <p>Is your "SOP" just a dusty binder that nobody actually reads?</p></div>
-                <div class="teaser-item"><span class="check">⚠</span> <p>If you got hit by a bus tomorrow, would the store open on time?</p></div>
-                <div class="teaser-item"><span class="check">⚠</span> <p>Are you terrified to fire someone because you have nobody to replace them?</p></div>
-                <div class="teaser-item"><span class="check">⚠</span> <p>Do you make money, but have no idea where it leaks out at the end of the month?</p></div>
+    <section id="architect" class="architect">
+        <div class="container split-layout">
+            <div class="architect-img-box">
+                <img src="ashley.jpg" alt="The Architect" class="architect-photo">
+                <div class="overlay"></div>
             </div>
-            
-            <div style="text-align:center; margin-top:40px;">
-                <a href="services.html" class="btn">FIX THE GLITCH</a>
+            <div class="architect-info">
+                <h2>I NAVIGATE THE CHAOS YOU FEAR.</h2>
+                <p class="bio">With almost two decades of service industry experience and 10 years in leadership handling high-risk ops, compliance, HR & Training, and multi-million dollar P&L management.</p>
+                <p class="bio">I handle internal architecture from team morale to SOPs.</p>
+                <blockquote class="philosophy">
+                    "Chaos is just unorganized energy. I don't believe in hoping for a good quarter. I believe in selecting it."
+                </blockquote>
+                <a href="contact.html" class="btn btn-primary">DEPLOY THE ARCHITECT</a>
             </div>
         </div>
     </section>
 
-    <footer><div class="container"><p class="copyright">&copy; 2025 The Ninth Wave Operations.</p></div></footer>
+    <footer>
+        <div class="container footer-content">
+            <p class="slogan">TAKE THE PURPLE PILL.</p>
+            <p class="copyright">&copy; 2025 The Ninth Wave Operations. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
