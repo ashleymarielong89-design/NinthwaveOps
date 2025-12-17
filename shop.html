@@ -3,68 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | The Ninth Wave</title>
+    <title>The Armory | Reality Hacking</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="9342.jpg" alt="Logo" class="nav-logo-img"></a>
-            <span class="brand-name"><a href="index.html">NINTH_WAVE_OPS</a></span>
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="protocols.html" class="nav-link">PROTOCOLS</a></li>
-            <li><a href="architect.html" class="nav-link">THE_ARCHITECT</a></li>
-            <li><a href="shop.html" class="nav-link" style="color:var(--accent);">SHOP</a></li>
-            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-link">DASHBOARD</a>
+        <a href="services.html" class="nav-link">SERVICES</a>
+        <a href="shop.html" class="nav-link active">ARMORY</a>
+        <a href="about.html" class="nav-link">LOGS</a>
     </nav>
 
-    <section class="protocols" style="padding-top: 40px; min-height: 80vh;">
-        <div class="container">
-            <h2 class="section-title">REQUISITIONS</h2>
-            <div class="grid-container">
-                
-                <div class="card">
-                    <h3>REALITY ARCHITECTURE KIT (V1)</h3>
-                    <p style="color:#888; font-size:0.9rem; margin-bottom:10px;">[ DIGITAL DOWNLOAD ]</p>
-                    <p>The core framework for restructuring your operational reality. Includes the R-Protocol Audit templates.</p>
-                    <br>
-                    <a href="#" class="btn btn-outline" style="font-size:0.8rem;">COMING SOON</a>
-                </div>
+    <div class="container" style="padding-top: 100px;">
+        <h1 class="glitch-text">THE ARMORY</h1>
+        <div class="sub-headline">TOOLS FOR REALITY HACKING</div>
 
-                <div class="card">
-                    <h3>THE NINTH WAVE APP</h3>
-                    <p style="color:#888; font-size:0.9rem; margin-bottom:10px;">[ SOFTWARE ]</p>
-                    <p>Daily tracking for decision latency and resistance loops. Get on the Alpha testing list.</p>
-                    <br>
-                    <a href="mailto:commandcenter@ninthwaveoperations.com?subject=Waitlist" class="btn btn-outline" style="font-size:0.8rem;">JOIN WAITLIST</a>
-                </div>
-
-                <div class="card highlight-card">
-                    <h3>CONSULTATION CREDIT</h3>
-                    <p style="color:#888; font-size:0.9rem; margin-bottom:10px;">[ SERVICE ]</p>
-                    <p class="highlight-text">>> 1 HOUR DEPLOYMENT</p>
-                    <p>Pre-purchase a single hour of Tactical Strategy. Direct access to The Architect.</p>
-                    <br>
-                    <a href="contact.html" class="btn btn-primary" style="font-size:0.8rem;">INQUIRE</a>
-                </div>
-
+        <div class="grid-container">
+            
+            <div class="grid-item humans">
+                <div class="grid-title">REALITY KIT (V1.0)</div>
+                <p style="color:#888;">[ DIGITAL DOWNLOAD ]</p>
+                <p>The manual for surviving a system crash. Includes the Glitch Log Protocols, Forbidden History, and Environment Audit.</p>
+                <br>
+                <div style="font-size:1.5em; color:#fff; font-weight:bold;">$22.00</div>
+                <a href="#" class="contact-btn" style="border-color:var(--hybrid-teal); color:var(--hybrid-teal);">DOWNLOAD</a>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p class="copyright">&copy; 2025 The Ninth Wave Operations.</p>
-        </div>
-    </footer>
+            <div class="grid-item humans">
+                <div class="grid-title">THE NINTH WAVE APP</div>
+                <p style="color:#888;">[ SOFTWARE WAITLIST ]</p>
+                <p>Daily tracking for decision latency and resistance loops. Get on the Alpha testing list.</p>
+                <br>
+                <a href="#" class="contact-btn" style="border-color:var(--hybrid-teal); color:var(--hybrid-teal);">JOIN WAITLIST</a>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="grid-item humans">
+                <div class="grid-title">CONSULT CREDIT</div>
+                <p style="color:#888;">[ 1 HOUR DEPLOYMENT ]</p>
+                <p>Pre-purchase a single hour of Tactical Strategy. Direct access to The Architect.</p>
+                <br>
+                <div style="font-size:1.5em; color:#fff; font-weight:bold;">$150.00</div>
+                <a href="#" class="contact-btn" style="border-color:var(--hybrid-teal); color:var(--hybrid-teal);">INQUIRE</a>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
