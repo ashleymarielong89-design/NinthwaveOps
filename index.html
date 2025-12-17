@@ -7,8 +7,15 @@
     
     <style>
         /* --- CORE STYLES (MATRIX VIBE) --- */
+        :root {
+            --matrix-green: #00ff00;
+            --spirit-purple: #bc13fe;
+            --hybrid-teal: #00f3ff;
+            --bg-black: #0d0d0d;
+        }
+
         body {
-            background-color: #0d0d0d;
+            background-color: var(--bg-black);
             color: #e0e0e0;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -32,126 +39,29 @@
 
         /* HERO SECTION */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
 
-        /* GLITCH HEADER */
+        /* GLITCH HEADER (Purple & Green Mix) */
         h1.glitch-text {
             font-size: 3em;
             text-transform: uppercase;
             color: #fff;
             margin-bottom: 10px;
             position: relative;
-            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-                        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+            text-shadow: 0.05em 0 0 var(--spirit-purple),
+                        -0.025em -0.05em 0 var(--matrix-green),
                         0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
             animation: glitch 500ms infinite;
         }
 
         @keyframes glitch {
-            0% { text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff; }
-            50% { text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff; }
-            100% { text-shadow: -0.025em 0 0 #ff0000, -0.025em -0.025em 0 #00ff00, -0.025em -0.05em 0 #0000ff; }
-        }
-
-        .sub-headline {
-            font-size: 1.2em;
-            color: #00ff00; /* Matrix Green */
-            margin-bottom: 50px;
-            letter-spacing: 2px;
-        }
-
-        /* THE IMMEDIATE ANSWER GRID */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        .grid-item {
-            border: 1px solid #333;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            transition: 0.3s;
-        }
-
-        .grid-item:hover {
-            border-color: #00ff00;
-            background: rgba(0, 255, 0, 0.1);
-        }
-
-        .grid-title {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #fff;
-            border-bottom: 2px solid #555;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-
-        /* CTA BUTTON */
-        .cta-button {
-            margin-top: 50px;
-            padding: 15px 30px;
-            background-color: transparent;
-            border: 2px solid #00ff00;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #00ff00;
-            color: #000;
-            box-shadow: 0 0 15px #00ff00;
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="hero">
-        
-        <h1 class="glitch-text">ARCHITECTING FLOW</h1>
-        <div class="sub-headline">IN A GLITCHED SYSTEM</div>
-
-        <div class="grid-container">
-            
-            <div class="grid-item">
-                <div class="grid-title">FOR BUSINESS</div>
-                <p><strong>Shop Velocity & Audits</strong></p>
-                <p>We identify "Personnel Latency" and fix broken onboarding protocols to stop revenue leaks in high-friction industries.</p>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-title">FOR HUMANS</div>
-                <p><strong>The Reality Kit</strong></p>
-                <p>A survival manual for system crashes. We use quantum mechanics and ops strategy to hack trauma loops and rewrite the code.</p>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-title">FOR THE SOUL</div>
-                <p><strong>The Bridge</strong></p>
-                <p>Moving from Survival Mode to Sovereignty. We architect the environment so you can finally stop buffering and start living.</p>
-            </div>
-
-        </div>
-
-        <a href="about.html" class="cta-button">ENTER THE SYSTEM</a>
-
-    </div>
-
-</body>
-</html>
+            0% { text-shadow: 0.05em 0 0 var(--spirit-purple), -0.05em -0.025em 0 var(--matrix-green); }
+            50% { text-shadow: 0.025em 0
