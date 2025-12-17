@@ -244,3 +244,38 @@ footer { padding: 60px 5%; text-align: center; border-top: 1px solid #222; }
     .architect-img-box { order: 2; }
     .architect-info { order: 1; }
 }
+/* --- THE MATRIX LAYER (CRT SCANLINE) --- */
+/* This adds a subtle TV texture over the whole site to give it that "Terminal" vibe */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.6; /* Adjusted for readability */
+}
+
+/* --- THE GLITCH HEADER EFFECT --- */
+/* Only applies to Big Titles. Keeps body text clean for "Flow". */
+h1, h2, .glitch-text {
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+               -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+               0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff; }
+  14% { text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff; }
+  15% { text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #00ff00, -0.05em -0.05em 0 #0000ff; }
+  49% { text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #00ff00, -0.05em -0.05em 0 #0000ff; }
+  50% { text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff; }
+  99% { text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff; }
+  100% { text-shadow: -0.025em 0 0 #ff0000, -0.025em -0.025em 0 #00ff00, -0.025em -0.05em 0 #0000ff; }
+}
