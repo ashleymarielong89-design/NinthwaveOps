@@ -3,59 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ninth Wave | Operational Architecture</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>The Ninth Wave | Operations Architecture</title>
+    
+    <style>
+        /* --- CORE STYLES (MATRIX VIBE) --- */
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* CRT SCANLINE OVERLAY */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 9999;
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* GLITCH HEADER */
+        h1.glitch-text {
+            font-size: 3em;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 500ms infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff; }
+            50% { text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff; }
+            100% { text-shadow: -0.025em 0 0 #ff0000, -0.025em -0.025em 0 #00ff00, -0.025em -0.05em 0 #0000ff; }
+        }
+
+        .sub-headline {
+            font-size: 1.2em;
+            color: #00ff00; /* Matrix Green */
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        /* THE IMMEDIATE ANSWER GRID */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .grid-item {
+            border: 1px solid #333;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .grid-item:hover {
+            border-color: #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .grid-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #fff;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* CTA BUTTON */
+        .cta-button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: transparent;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="9342.jpg" alt="Logo" class="nav-logo-img"></a>
-            <span class="brand-name"><a href="index.html">NINTH_WAVE_OPS</a></span>
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="protocols.html" class="nav-link">PROTOCOLS</a></li>
-            <li><a href="architect.html" class="nav-link">THE_ARCHITECT</a></li>
-            <li><a href="shop.html" class="nav-link">SHOP</a></li>
-            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
-    </nav>
+    <div class="hero">
+        
+        <h1 class="glitch-text">ARCHITECTING FLOW</h1>
+        <div class="sub-headline">IN A GLITCHED SYSTEM</div>
 
-    <header class="hero">
-        <div class="hero-container">
-            <h1 class="glitch-text">DON'T JUST SURVIVE THE SIMULATION.<br>HACK IT.</h1>
-            <p class="hero-sub">Operational Architecture. Cognitive Protocol. Total Agency.</p>
-            <div class="cta-group">
-                <a href="contact.html" class="btn btn-primary">DEPLOY THE ARCHITECT</a>
-                <a href="protocols.html" class="btn btn-outline">INITIATE PROTOCOLS</a>
+        <div class="grid-container">
+            
+            <div class="grid-item">
+                <div class="grid-title">FOR BUSINESS</div>
+                <p><strong>Shop Velocity & Audits</strong></p>
+                <p>We identify "Personnel Latency" and fix broken onboarding protocols to stop revenue leaks in high-friction industries.</p>
             </div>
-        </div>
-    </header>
 
-    <section class="teaser">
-        <div class="container">
-            <div class="terminal-box">
-                <p class="terminal-header">>> SYSTEM_STATUS: INITIALIZING...</p>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill"></div>
-                </div>
-                <p class="terminal-text">The Ninth Wave App & Reality Architecture Kits. <span class="blink">LOADING... [60%]</span></p>
-                <a href="mailto:commandcenter@ninthwaveoperations.com?subject=Join Waitlist" class="waitlist-link">[ JOIN_THE_WAITLIST ]</a>
+            <div class="grid-item">
+                <div class="grid-title">FOR HUMANS</div>
+                <p><strong>The Reality Kit</strong></p>
+                <p>A survival manual for system crashes. We use quantum mechanics and ops strategy to hack trauma loops and rewrite the code.</p>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p class="slogan">TAKE THE PURPLE PILL.</p>
-            <p class="copyright">&copy; 2025 The Ninth Wave Operations.</p>
-        </div>
-    </footer>
+            <div class="grid-item">
+                <div class="grid-title">FOR THE SOUL</div>
+                <p><strong>The Bridge</strong></p>
+                <p>Moving from Survival Mode to Sovereignty. We architect the environment so you can finally stop buffering and start living.</p>
+            </div>
 
-    <script src="script.js"></script>
+        </div>
+
+        <a href="about.html" class="cta-button">ENTER THE SYSTEM</a>
+
+    </div>
+
 </body>
 </html>
