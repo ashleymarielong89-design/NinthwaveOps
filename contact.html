@@ -3,51 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | The Ninth Wave</title>
+    <title>Secure Channel | Ninth Wave</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="9342.jpg" alt="Logo" class="nav-logo-img"></a>
-            <span class="brand-name"><a href="index.html">NINTH_WAVE_OPS</a></span>
+    <nav class="top-nav">
+        <a href="index.html" class="brand">NINTH_WAVE_OPS</a>
+        <div class="nav-links">
+            <a href="protocols.html" class="nav-link">PROTOCOLS</a>
+            <a href="architect.html" class="nav-link">ARCHITECT</a>
+            <a href="shop.html" class="nav-link">ARMORY</a>
+            <a href="contact.html" class="nav-link active">SECURE_CH</a>
         </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="protocols.html" class="nav-link">PROTOCOLS</a></li>
-            <li><a href="architect.html" class="nav-link">THE_ARCHITECT</a></li>
-            <li><a href="shop.html" class="nav-link">SHOP</a></li>
-            <li><a href="contact.html" class="nav-link" style="color:var(--accent);">CONTACT</a></li>
-        </ul>
     </nav>
 
-    <section class="hero" style="height: 80vh;">
-        <div class="hero-container">
-            <h1 class="glitch-text">SECURE CHANNEL</h1>
-            <p class="hero-sub">Establish connection. Encrypted line open.</p>
-            
-            <div class="terminal-box" style="margin-top: 20px; text-align: left; padding: 30px; border: 1px solid #333; background: rgba(0,0,0,0.8);">
-                <p style="color:var(--accent); margin-bottom:10px;">>> DIRECT_UPLINK:</p>
-                <p style="margin-bottom:20px;">commandcenter@ninthwaveoperations.com</p>
-                
-                <p style="color:var(--accent); margin-bottom:10px;">>> LOCATION:</p>
-                <p style="margin-bottom:20px;">[ REDACTED ] // Remote Operations</p>
-                
-                <a href="mailto:commandcenter@ninthwaveoperations.com" class="btn btn-primary" style="width: 100%; text-align: center;">TRANSMIT MESSAGE</a>
+    <div class="container" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+        
+        <div class="terminal-window">
+            <h2 style="color:var(--matrix-green); margin-top:0;">>> SECURE CHANNEL OPEN</h2>
+            <p>Establish connection. Encrypted line.</p>
+
+            <div style="margin-top:30px; border-top:1px dashed #333; padding-top:20px;">
+                <p style="color:#888; font-size:0.8em;">DIRECT UPLINK:</p>
+                <p style="font-size:1.2em; font-weight:bold;">commandcenter@ninthwaveoperations.com</p>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p class="copyright">&copy; 2025 The Ninth Wave Operations.</p>
-        </div>
-    </footer>
+            <div style="margin-top:20px;">
+                <p style="color:#888; font-size:0.8em;">CURRENT LOCATION:</p>
+                <p>[ REDACTED ] // Remote Operations</p>
+            </div>
 
-    <script src="script.js"></script>
+            <a href="mailto:commandcenter@ninthwaveoperations.com" class="btn btn-primary" style="width:100%; text-align:center; box-sizing:border-box;">TRANSMIT MESSAGE</a>
+        </div>
+
+    </div>
+
 </body>
 </html>

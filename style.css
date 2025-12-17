@@ -1,25 +1,24 @@
-/* --- THE NINTH WAVE MASTER STYLESHEET --- */
+/* --- THE NINTH WAVE: ELITE MATRIX EDITION --- */
 
 :root {
     --matrix-green: #00ff00;
     --spirit-purple: #bc13fe;
     --hybrid-teal: #00f3ff;
     --bg-black: #0d0d0d;
-    --text-grey: #e0e0e0;
+    --panel-grey: #1a1a1a;
     --border-dim: #333;
 }
 
 body {
     background-color: var(--bg-black);
-    color: var(--text-grey);
+    color: #e0e0e0;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* --- THE MATRIX LAYER (CRT SCANLINE) --- */
+/* CRT SCANLINE OVERLAY */
 body::before {
     content: " ";
     display: block;
@@ -30,37 +29,35 @@ body::before {
     z-index: 9999;
     background-size: 100% 4px, 3px 100%;
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
-/* --- LAYOUT UTILITIES --- */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px 20px 20px;
-}
-
-/* --- NAVIGATION --- */
+/* --- NAVIGATION (FIXED TOP) --- */
 .top-nav {
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-    background: rgba(0,0,0,0.8);
+    justify-content: space-between; /* Space out Logo and Links */
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.9);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--border-dim);
+    box-sizing: border-box;
+}
+
+.brand {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
 .nav-link {
@@ -69,24 +66,27 @@ body::before {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.9em;
-    margin-left: 25px;
-    margin-right: 20px;
     transition: 0.3s;
 }
 
-.nav-link:hover {
-    color: var(--matrix-green);
-    text-shadow: 0 0 5px var(--matrix-green);
+.nav-link:hover { color: var(--matrix-green); text-shadow: 0 0 5px var(--matrix-green); }
+.nav-link.active { color: #fff; border-bottom: 2px solid var(--matrix-green); }
+
+/* --- HERO & TEXT --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 120px 20px 40px 20px; }
+
+.hero-center {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
 }
 
-.nav-link.active {
-    color: #fff;
-    border-bottom: 2px solid var(--matrix-green);
-}
-
-/* --- TYPOGRAPHY & GLITCH --- */
 h1.glitch-text {
-    font-size: 2.5em;
+    font-size: 3em;
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 10px;
@@ -98,10 +98,10 @@ h1.glitch-text {
 .sub-headline {
     font-size: 1.2em;
     color: var(--matrix-green);
-    margin-bottom: 50px;
-    letter-spacing: 2px;
+    margin-bottom: 60px;
+    letter-spacing: 3px;
     border-bottom: 1px solid var(--spirit-purple);
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 @keyframes glitch {
@@ -110,94 +110,69 @@ h1.glitch-text {
     100% { text-shadow: -0.025em 0 0 var(--spirit-purple), -0.025em -0.025em 0 var(--matrix-green); }
 }
 
-/* --- GRID SYSTEM (For Cards) --- */
+/* --- THE PROTOCOL GRID --- */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     width: 100%;
-    margin-bottom: 50px;
 }
 
-.grid-item {
-    display: block;
-    text-decoration: none;
-    color: var(--text-grey);
+.card {
+    background: rgba(255,255,255,0.03);
     border: 1px solid var(--border-dim);
     padding: 30px;
-    background: rgba(255, 255, 255, 0.02);
     transition: 0.3s;
     position: relative;
+    overflow: hidden;
 }
 
-.grid-title {
-    font-size: 1.2em;
-    font-weight: bold;
+.card:hover {
+    border-color: var(--matrix-green);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card h3 {
     color: #fff;
-    border-bottom: 2px solid #555;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-top: 0;
 }
 
-/* Hover Colors */
-.business:hover { border-color: var(--matrix-green); box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); }
-.business:hover .grid-title { border-bottom-color: var(--matrix-green); color: var(--matrix-green); }
-
-.humans:hover { border-color: var(--hybrid-teal); box-shadow: 0 0 15px rgba(0, 243, 255, 0.1); }
-.humans:hover .grid-title { border-bottom-color: var(--hybrid-teal); color: var(--hybrid-teal); }
-
-.soul:hover { border-color: var(--spirit-purple); box-shadow: 0 0 15px rgba(188, 19, 254, 0.2); }
-.soul:hover .grid-title { border-bottom-color: var(--spirit-purple); color: var(--spirit-purple); }
-
+.highlight-text { color: var(--matrix-green); font-weight: bold; }
 
 /* --- BUTTONS --- */
-.cta-button {
+.btn {
     display: inline-block;
-    margin-top: 40px;
-    padding: 15px 35px;
-    background-color: transparent;
-    border: 2px solid var(--spirit-purple);
-    color: var(--spirit-purple);
-    font-weight: bold;
-    text-decoration: none;
+    padding: 15px 30px;
     text-transform: uppercase;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background-color: var(--spirit-purple);
-    color: #fff;
-    box-shadow: 0 0 20px var(--spirit-purple);
-}
-
-.contact-btn {
-    border: 1px solid var(--matrix-green);
-    color: var(--matrix-green);
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 0.9em;
-    transition: 0.3s;
-}
-.contact-btn:hover { background: var(--matrix-green); color: #000; }
-
-/* --- TERMINAL BOX (About Page) --- */
-.terminal-box {
-    border: 1px solid var(--border-dim);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    margin-top: 30px;
-}
-
-.highlight-green { color: var(--matrix-green); font-weight: bold; }
-.highlight-purple { color: var(--spirit-purple); font-weight: bold; }
-.quote-box {
-    border-left: 4px solid var(--matrix-green);
-    background: linear-gradient(90deg, rgba(0, 255, 0, 0.05), transparent);
-    padding: 20px;
-    margin: 30px 0;
-    font-size: 1.3em;
     font-weight: bold;
-    color: #fff;
+    text-decoration: none;
+    border: 1px solid;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    border-color: var(--matrix-green);
+    color: var(--matrix-green);
+}
+.btn-primary:hover { background: var(--matrix-green); color: #000; box-shadow: 0 0 15px var(--matrix-green); }
+
+.btn-ghost {
+    border-color: #555;
+    color: #888;
+}
+.btn-ghost:hover { border-color: #fff; color: #fff; }
+
+/* --- CONTACT TERMINAL --- */
+.terminal-window {
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #333;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }

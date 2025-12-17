@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Architect | The Ninth Wave</title>
+    <title>The Architect | Ninth Wave</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="9342.jpg" alt="Logo" class="nav-logo-img"></a>
-            <span class="brand-name"><a href="index.html">NINTH_WAVE_OPS</a></span>
+    <nav class="top-nav">
+        <a href="index.html" class="brand">NINTH_WAVE_OPS</a>
+        <div class="nav-links">
+            <a href="protocols.html" class="nav-link">PROTOCOLS</a>
+            <a href="architect.html" class="nav-link active">ARCHITECT</a>
+            <a href="shop.html" class="nav-link">ARMORY</a>
+            <a href="contact.html" class="nav-link">SECURE_CH</a>
         </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="protocols.html" class="nav-link">PROTOCOLS</a></li>
-            <li><a href="architect.html" class="nav-link" style="color:var(--accent);">THE_ARCHITECT</a></li>
-            <li><a href="shop.html" class="nav-link">SHOP</a></li>
-            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
     </nav>
 
-    <section class="architect" style="padding-top: 40px; min-height: 80vh;">
-        <div class="container split-layout">
-            <div class="architect-img-box">
-                <img src="ashley.jpg" alt="The Architect" class="architect-photo">
-            </div>
-            <div class="architect-info">
-                <h2>I NAVIGATE THE CHAOS YOU FEAR.</h2>
-                <p class="bio">With almost two decades of service industry experience and 10 years in leadership handling high-risk ops, compliance, HR & Training, and multi-million dollar P&L management.</p>
-                <p class="bio">I handle internal architecture from team morale to SOPs.</p>
-                <blockquote class="philosophy">
-                    "Chaos is just unorganized energy. I don't believe in hoping for a good quarter. I believe in selecting it."
-                </blockquote>
-                <a href="contact.html" class="btn btn-primary">DEPLOY THE ARCHITECT</a>
+    <div class="container">
+        <h1 class="glitch-text">THE ARCHITECT</h1>
+        <div class="sub-headline">ASHLEY LONG // OPS DIRECTOR</div>
+
+        <div class="card" style="margin-bottom: 40px; border-left: 4px solid var(--matrix-green);">
+            <h2 style="margin-top:0; color:#fff;">I NAVIGATE THE CHAOS YOU FEAR.</h2>
+            <p>With 15+ years of service industry experience and 10 years in High-Risk Ops (Cannabis), Compliance, and P&L Management.</p>
+            <p>"Chaos is just unorganized energy. I don't believe in hoping for a good quarter. I believe in architecting it."</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>>> SYSTEM LOG: THE ZERO POINT</h3>
+                <p>I didn't become "The Architect" because I wanted a career change. I became one because the system crashed.</p>
+                
+                <p>In March 2024, I hit the <strong>Zero Point</strong>. I lost the title, the truck, and the illusion of safety. Standing on a bridge in the middle of the city, I realized I wasn't just "unlucky"—I was being stripped.</p>
+                
+                <p>The old code—the people-pleasing, the frantic managing, the trying to be a "House" for everyone else—was deleted.</p>
+
+                <p style="font-size:1.2em; color:var(--spirit-purple); font-weight:bold; margin: 30px 0;">
+                    I am not the House. I am the Bridge.
+                </p>
+
+                <p>My purpose isn't to shelter you. It is to help you cross over. Whether you are a Dispensary Owner drowning in compliance or a human drowning in trauma, I provide the structure to get you to the other side.</p>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p class="copyright">&copy; 2025 The Ninth Wave Operations.</p>
-        </div>
-    </footer>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
