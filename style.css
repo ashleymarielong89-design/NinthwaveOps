@@ -1,4 +1,7 @@
-/* --- THE NINTH WAVE: ELITE MATRIX EDITION --- */
+/* --- THE NINTH WAVE: ELITE READABILITY EDITION --- */
+
+/* IMPORT FONTS: Playfair Display (Headers) & Roboto (Body) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
     --matrix-green: #00ff00;
@@ -12,13 +15,14 @@
 body {
     background-color: var(--bg-black);
     color: #e0e0e0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif; /* CLEAN FONT FOR READING */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8; /* More breathing room for text */
+    font-size: 18px; /* Bigger text for less eye strain */
 }
 
-/* CRT SCANLINE OVERLAY */
+/* CRT SCANLINE OVERLAY (Subtler now) */
 body::before {
     content: " ";
     display: block;
@@ -29,16 +33,16 @@ body::before {
     z-index: 9999;
     background-size: 100% 4px, 3px 100%;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.3; /* Turned down opacity so text pops more */
 }
 
-/* --- NAVIGATION (FIXED TOP) --- */
+/* --- NAVIGATION --- */
 .top-nav {
     display: flex;
-    justify-content: space-between; /* Space out Logo and Links */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
     position: fixed;
     top: 0;
     width: 100%;
@@ -48,32 +52,32 @@ body::before {
 }
 
 .brand {
+    font-family: 'Playfair Display', serif; /* BOSS FONT */
     font-weight: bold;
     color: #fff;
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
+.nav-links { display: flex; gap: 30px; }
 
 .nav-link {
+    font-family: 'Roboto', sans-serif;
     color: #888;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
-.nav-link:hover { color: var(--matrix-green); text-shadow: 0 0 5px var(--matrix-green); }
+.nav-link:hover { color: var(--matrix-green); }
 .nav-link.active { color: #fff; border-bottom: 2px solid var(--matrix-green); }
 
 /* --- HERO & TEXT --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 120px 20px 40px 20px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 140px 20px 60px 20px; }
 
 .hero-center {
     min-height: 90vh;
@@ -85,23 +89,28 @@ body::before {
     padding-top: 60px;
 }
 
+/* GLITCH HEADERS (Using Playfair Display now) */
 h1.glitch-text {
-    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 10px;
     position: relative;
     text-shadow: 0.05em 0 0 var(--spirit-purple), -0.025em -0.05em 0 var(--matrix-green);
     animation: glitch 500ms infinite;
+    line-height: 1.1;
 }
 
 .sub-headline {
-    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
     color: var(--matrix-green);
     margin-bottom: 60px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     border-bottom: 1px solid var(--spirit-purple);
     padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
 @keyframes glitch {
@@ -121,7 +130,7 @@ h1.glitch-text {
 .card {
     background: rgba(255,255,255,0.03);
     border: 1px solid var(--border-dim);
-    padding: 30px;
+    padding: 35px; /* More padding */
     transition: 0.3s;
     position: relative;
     overflow: hidden;
@@ -129,50 +138,48 @@ h1.glitch-text {
 
 .card:hover {
     border-color: var(--matrix-green);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.1);
     transform: translateY(-5px);
 }
 
 .card h3 {
+    font-family: 'Playfair Display', serif; /* BOSS FONT */
     color: #fff;
     border-bottom: 1px solid #444;
     padding-bottom: 15px;
     margin-top: 0;
+    font-size: 1.4em;
+    letter-spacing: 1px;
 }
-
-.highlight-text { color: var(--matrix-green); font-weight: bold; }
 
 /* --- BUTTONS --- */
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 35px;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     border: 1px solid;
     transition: 0.3s;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    font-size: 0.9em;
 }
 
-.btn-primary {
-    border-color: var(--matrix-green);
-    color: var(--matrix-green);
-}
-.btn-primary:hover { background: var(--matrix-green); color: #000; box-shadow: 0 0 15px var(--matrix-green); }
+.btn-primary { border-color: var(--matrix-green); color: var(--matrix-green); }
+.btn-primary:hover { background: var(--matrix-green); color: #000; box-shadow: 0 0 20px var(--matrix-green); }
 
-.btn-ghost {
-    border-color: #555;
-    color: #888;
-}
+.btn-ghost { border-color: #555; color: #aaa; }
 .btn-ghost:hover { border-color: #fff; color: #fff; }
 
-/* --- CONTACT TERMINAL --- */
+/* --- TERMINAL WINDOW (Contact) --- */
 .terminal-window {
-    background: rgba(0,0,0,0.8);
+    background: rgba(10,10,10,0.95);
     border: 1px solid #333;
-    padding: 40px;
+    padding: 50px;
     max-width: 600px;
     margin: 0 auto;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
