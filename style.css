@@ -1,6 +1,5 @@
-/* --- THE NINTH WAVE: FINAL MOBILE & FONT FIX --- */
+/* --- THE NINTH WAVE: FINAL POLISH --- */
 
-/* 1. IMPORT THE "BOSS" FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
@@ -14,14 +13,14 @@
 body {
     background-color: var(--bg-black);
     color: #e0e0e0;
-    font-family: 'Roboto', sans-serif; /* THIS FIXES THE EYE PAIN */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     font-size: 18px;
 }
 
-/* 2. NAVIGATION (Desktop) */
+/* NAVIGATION */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -37,7 +36,7 @@ body {
 }
 
 .brand {
-    font-family: 'Playfair Display', serif; /* BOSS FONT */
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -61,26 +60,23 @@ body {
 .nav-link:hover { color: var(--matrix-green); }
 .nav-link.active { color: #fff; border-bottom: 2px solid var(--matrix-green); }
 
-/* 3. MOBILE MENU FIX (This creates the stack) */
+/* MOBILE MENU FIX */
 @media (max-width: 768px) {
-    .top-nav {
-        flex-direction: column; /* Stacks Logo on top */
-        padding: 15px 10px;
+    .top-nav { flex-direction: column; padding: 15px 10px; }
+    .brand { margin-bottom: 15px; }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .nav-link { font-size: 0.75em; padding: 5px; }
+    .container { padding-top: 180px !important; }
+    
+    /* FIX FOR ZOOMED CONTACT PAGE */
+    .terminal-window {
+        padding: 20px !important; /* Smaller padding on phone */
+        width: 100% !important; /* Fit to screen */
+        box-sizing: border-box;
     }
-    .brand { margin-bottom: 15px; } /* Space below logo */
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .nav-link {
-        font-size: 0.75em; /* Smaller text for phone */
-        padding: 5px;
-    }
-    .container { padding-top: 180px !important; } /* Pushes content down so menu doesn't cover it */
 }
 
-/* --- HERO & TEXT --- */
+/* HERO & TEXT */
 .container { max-width: 1100px; margin: 0 auto; padding: 140px 20px 60px 20px; }
 
 .hero-center {
@@ -93,7 +89,6 @@ body {
     padding-top: 60px;
 }
 
-/* GLITCH HEADERS (Playfair Font) */
 h1.glitch-text {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
@@ -123,7 +118,7 @@ h1.glitch-text {
     100% { text-shadow: -0.025em 0 0 var(--spirit-purple), -0.025em -0.025em 0 var(--matrix-green); }
 }
 
-/* --- CARDS --- */
+/* CARDS */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -153,7 +148,7 @@ h1.glitch-text {
     letter-spacing: 1px;
 }
 
-/* --- BUTTONS --- */
+/* BUTTONS */
 .btn {
     display: inline-block;
     padding: 15px 30px;
@@ -175,7 +170,7 @@ h1.glitch-text {
 .btn-ghost { border-color: #555; color: #aaa; }
 .btn-ghost:hover { border-color: #fff; color: #fff; }
 
-/* --- TERMINAL WINDOW --- */
+/* TERMINAL WINDOW */
 .terminal-window {
     background: rgba(10,10,10,0.95);
     border: 1px solid #333;
@@ -184,3 +179,7 @@ h1.glitch-text {
     margin: 0 auto;
     box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
+
+/* IMAGE STYLES */
+.logo-img { width: 150px; margin-bottom: 20px; border-radius: 50%; border: 2px solid var(--spirit-purple); }
+.bio-img { width: 100%; max-width: 300px; border-radius: 10px; border: 1px solid var(--border-dim); margin-bottom: 30px; }
