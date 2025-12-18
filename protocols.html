@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocols | Ninth Wave</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* SMOOTH SCROLLING FOR THE ANCHOR LINKS */
+        html { scroll-behavior: smooth; }
+        
+        /* SECTION DIVIDERS */
+        .sector-divider {
+            border-top: 1px solid #333;
+            margin: 60px 0 40px 0;
+            padding-top: 20px;
+        }
+        
+        /* CATEGORY BADGES */
+        .badge-biz { color: var(--matrix-green); border: 1px solid var(--matrix-green); padding: 5px 10px; font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; }
+        .badge-can { color: var(--spirit-purple); border: 1px solid var(--spirit-purple); padding: 5px 10px; font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; }
+        
+        /* NAVIGATION BUTTONS AT TOP */
+        .mission-select {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+        .mission-btn {
+            flex: 1;
+            padding: 20px;
+            background: #111;
+            border: 1px solid #333;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            min-width: 200px;
+        }
+        .mission-btn:hover {
+            border-color: #fff;
+            background: #222;
+        }
+        .mission-btn h3 { margin: 0; font-size: 1.2em; }
+        .mission-btn span { font-size: 0.8em; color: #888; }
+    </style>
 </head>
 <body>
 
@@ -20,46 +60,96 @@
 
     <div class="container">
         <h1 class="glitch-text">OPERATIONAL PROTOCOLS</h1>
-        <div class="sub-headline">DEPLOYMENT MENU</div>
+        <div class="sub-headline">SELECT YOUR SECTOR</div>
+
+        <div class="mission-select">
+            <a href="#business" class="mission-btn">
+                <h3 style="color:var(--matrix-green);">BUSINESS</h3>
+                <span>Startups / Remote / Corp</span>
+            </a>
+            <a href="#cannabis" class="mission-btn">
+                <h3 style="color:var(--spirit-purple);">SECTOR C</h3>
+                <span>Cannabis / High-Risk Ops</span>
+            </a>
+            <a href="shop.html" class="mission-btn">
+                <h3 style="color:var(--hybrid-teal);">PERSONAL</h3>
+                <span>The Kit / Shadow Work</span>
+            </a>
+        </div>
+
+        <div id="business" class="sector-divider"></div>
+        <div class="badge-biz">SECTOR: BUSINESS</div>
+        <h2 style="font-family:'Playfair Display', serif; font-size:2.5em; color:#fff; margin-top:0;">THE R-PROTOCOL</h2>
+        <p style="font-size:1.1em; max-width: 800px;">
+            Most companies try to force results (Drag). We remove the friction so results happen automatically (Flow). 
+            Our proprietary 5-Phase Loop ensures the fix sticks.
+        </p>
 
         <div class="grid-container">
-            
             <div class="card">
-                <h3>01 // THE R-PROTOCOL</h3>
-                <p><strong>Cognitive Architecture for Teams.</strong></p>
-                <p>We don't just "fix" problems; we install a self-correcting loop. Our proprietary 5-Phase System ensures the fix sticks.</p>
-                <ul style="color:#aaa; font-size:0.9em; padding-left:20px; margin-top:10px;">
-                    <li><strong>Phase 1: Resistance</strong> (Identifying the Friction)</li>
-                    <li><strong>Phase 2: Refraction</strong> (The Pivot/Reboot)</li>
-                    <li><strong>Phase 3: Resilience</strong> (Capacity Building)</li>
-                    <li><strong>Phase 4: Results</strong> (Execution Flow)</li>
-                    <li><strong>Phase 5: Renew</strong> (The Loop)</li>
-                </ul>
-                <a href="contact.html" class="btn btn-ghost">DETAILS</a>
+                <h3>PHASE 1: RESISTANCE</h3>
+                <p><strong>(The Audit)</strong></p>
+                <p>We locate the "No." Is your friction coming from a <strong>Process Failure</strong> (Bad SOPs) or a <strong>People Failure</strong> (Lack of Training)? We identify the energy leak.</p>
             </div>
-
             <div class="card">
-                <h3>02 // SECTOR C (CANNABIS)</h3>
-                <p><strong>High-Risk / High-Reg Deployment.</strong></p>
-                <p>Specialized Ops for the Cannabis sector. Focusing on <strong>Flow & Education</strong>: METRC compliance, Merchandising, SOP architecture, and Budtender Upskilling (Sales & Stoners Workshop).</p>
-                <a href="contact.html" class="btn btn-ghost">SECURE OPS</a>
+                <h3>PHASE 2: REFRACTION</h3>
+                <p><strong>(The Pivot)</strong></p>
+                <p>We shorten the latency. We stop the "Rumination Loop" (Spinning Wheels) and pivot immediately to the new direction. We accept the Zero Point.</p>
             </div>
-
             <div class="card">
-                <h3>03 // THE GREEN LIGHT</h3>
-                <p><strong>Onboarding & Signal Audits.</strong></p>
-                <p>For Remote Teams & Startups. We audit the "Ghost Period" between hiring and productivity. We identify where your signal is lost and give you the Green Light roadmap to fix retention.</p>
-                <a href="contact.html" class="btn btn-ghost">INITIATE AUDIT</a>
+                <h3>PHASE 3: RESILIENCE</h3>
+                <p><strong>(The Build)</strong></p>
+                <p>Capacity Building. We install the "Wet Skin" infrastructure—training your team to handle high-voltage demand without burning out.</p>
             </div>
-
-            <div class="card" style="border-color:var(--matrix-green);">
-                <h3 style="color:var(--matrix-green);">04 // THE CAPTAIN</h3>
-                <p style="color:var(--matrix-green); font-weight:bold;">>> INTERIM OPS MANAGEMENT</p>
-                <p>Insert The Architect directly into your chain of command. I stabilize the chaos, handle the firing/hiring, and train your replacement before I exit.</p>
-                <a href="contact.html" class="btn btn-primary">DEPLOY ARCHITECT</a>
-            </div>
-
         </div>
+
+        <div style="margin-top: 60px; background: #111; padding: 40px; border-left: 4px solid var(--matrix-green);">
+            <h3 style="margin-top:0; color:#fff;">SPECIAL OPS: "THE GREEN LIGHT"</h3>
+            <p style="color:#aaa;"><strong>TARGET:</strong> REMOTE TEAMS & STARTUPS</p>
+            <p>A 10-Point Diagnostic of your Onboarding Process. We audit the "Ghost Period" between hiring and productivity. We identify where your signal is lost and give you the Green Light roadmap to fix retention.</p>
+            <a href="contact.html" class="btn btn-primary">INITIATE GREEN LIGHT AUDIT</a>
+        </div>
+
+
+        <div id="cannabis" class="sector-divider"></div>
+        <div class="badge-can">SECTOR: CANNABIS</div>
+        <h2 style="font-family:'Playfair Display', serif; font-size:2.5em; color:#fff; margin-top:0;">SECTOR C: HIGH FRICTION OPS</h2>
+        <p style="font-size:1.1em; max-width: 800px;">
+            8 Years of Zero-Infraction Operations in Oregon. We balance "Strict Compliance" (The Cage) with "High Flow" (The Energy).
+        </p>
+
+        <div class="grid-container">
+            <div class="card">
+                <h3>THE FLOW AUDIT</h3>
+                <p><strong>Shop Velocity & Theft Mitigation.</strong></p>
+                <p>I walk your floor. I identify the "Hover Points" where customers get confused and money gets lost. We re-map your physical layout for maximum throughput.</p>
+            </div>
+            <div class="card">
+                <h3>SALES & STONERS</h3>
+                <p><strong>Budtender Upskilling Workshop.</strong></p>
+                <p>Moving your staff from "Order Takers" to "Vibe Architects." We teach them to sell based on *Feeling* (Sleep, Energy, Pain), not just THC percentage.</p>
+            </div>
+            <div class="card">
+                <h3>THE CAPTAIN</h3>
+                <p><strong>Interim Management.</strong></p>
+                <p>I step in. I stabilize the chaos. I handle the firing, the hiring, and the METRC clean-up. Then I train my replacement and exit.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="contact.html" class="btn btn-ghost">REQUEST SECTOR C DEPLOYMENT</a>
+        </div>
+
+
+        <div id="personal" class="sector-divider"></div>
+        <div style="text-align: center; padding: 60px 20px;">
+            <h2 style="font-family:'Playfair Display', serif; font-size:2.5em; color:#fff; margin-top:0;">SECTOR ZERO: PERSONAL</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px auto; color: #aaa;">
+                You cannot build a business on a broken foundation. The "Reality Architecture Kit" is the manual for hacking your own operating system.
+            </p>
+            <a href="shop.html" class="btn btn-primary" style="border-color: var(--hybrid-teal); color: var(--hybrid-teal);">ENTER THE ARMORY</a>
+        </div>
+
     </div>
 
 </body>
