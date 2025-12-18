@@ -1,4 +1,4 @@
-/* --- THE NINTH WAVE: FINAL LAYOUT FIX --- */
+/* --- THE NINTH WAVE: PURPLE PILL OPS --- */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
 
@@ -6,19 +6,20 @@
     --matrix-green: #00ff00;
     --spirit-purple: #bc13fe;
     --hybrid-teal: #00f3ff;
-    --bg-black: #0d0d0d;
-    --border-dim: #333;
+    --bg-black: #050505;
+    --card-bg: #111;
+    --text-main: #e0e0e0;
 }
 
 body {
     background-color: var(--bg-black);
-    color: #e0e0e0;
+    color: var(--text-main);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     font-size: 18px;
-    overflow-x: hidden; /* Prevents side scrolling */
+    overflow-x: hidden;
 }
 
 /* NAVIGATION */
@@ -26,13 +27,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 20px 40px;
     background: rgba(0,0,0,0.95);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-dim);
+    border-bottom: 1px solid #222;
     box-sizing: border-box;
 }
 
@@ -43,6 +44,7 @@ body {
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 .nav-links { display: flex; gap: 30px; }
@@ -58,12 +60,11 @@ body {
     transition: 0.3s;
 }
 
-.nav-link:hover { color: var(--matrix-green); }
-.nav-link.active { color: #fff; border-bottom: 2px solid var(--matrix-green); }
+.nav-link:hover { color: var(--spirit-purple); }
+.nav-link.active { color: #fff; border-bottom: 2px solid var(--spirit-purple); }
 
-/* HERO & TEXT */
-.container { max-width: 1100px; margin: 0 auto; padding: 140px 20px 60px 20px; }
-
+/* LAYOUT */
+.container { max-width: 1000px; margin: 0 auto; padding: 140px 20px 60px 20px; }
 .hero-center {
     min-height: 90vh;
     display: flex;
@@ -71,48 +72,100 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 140px; /* Default desktop padding */
+    padding-top: 100px;
 }
 
-h1.glitch-text {
+/* TYPOGRAPHY */
+h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5em; 
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 15px;
-    position: relative;
-    text-shadow: 0.05em 0 0 var(--spirit-purple), -0.025em -0.05em 0 var(--matrix-green);
-    animation: glitch 500ms infinite;
-    line-height: 1.2;
-    width: 100%; /* Ensure it takes full width */
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 0px rgba(188, 19, 254, 0.3); /* Clean shadow, no glitch */
 }
 
-/* SUB-HEADLINE (Green Text) */
 .sub-headline {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: var(--matrix-green);
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-/* GLITCH ANIMATION */
-@keyframes glitch {
-    0% { text-shadow: 0.05em 0 0 var(--spirit-purple), -0.05em -0.025em 0 var(--matrix-green); }
-    50% { text-shadow: 0.025em 0.05em 0 var(--matrix-green), 0.05em 0 0 var(--spirit-purple); }
-    100% { text-shadow: -0.025em 0 0 var(--spirit-purple), -0.025em -0.025em 0 var(--matrix-green); }
+.logo-img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--spirit-purple);
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.2);
 }
 
-/* MOBILE FIXES */
+/* CARDS */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    padding: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: block;
+}
+
+.card:hover {
+    border-color: var(--spirit-purple);
+    transform: translateY(-5px);
+}
+
+.card h3 { margin-top: 0; color: #fff; font-family: 'Playfair Display', serif; font-size: 1.5em; }
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--spirit-purple);
+    color: #000;
+    border: 1px solid var(--spirit-purple);
+}
+.btn-primary:hover {
+    background: transparent;
+    color: var(--spirit-purple);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #555;
+}
+.btn-ghost:hover {
+    border-color: var(--matrix-green);
+    color: var(--matrix-green);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-    /* Stack the menu */
-    .top-nav { flex-direction: column; padding: 20px 10px; }
-    .brand { margin-bottom: 15px; font-size: 1.4em; }
-    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; }
-    .nav-link { font-size: 0.8em; padding: 5px; }
-    
-    /* PUSH CONTENT DOWN SO MENU DOESN'T COVER IT */
-    .hero-center { padding-top: 240px; } 
-    .container { padding-top: 24
+    .top-nav { flex-direction: column; padding: 20px; }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    h1 { font-size: 2.2em; }
+}
