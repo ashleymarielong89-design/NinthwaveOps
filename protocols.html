@@ -1,64 +1,26 @@
-    <div class="container">
-        <h1 class="glitch-text">PROTOCOLS</h1>
-        <div class="sub-headline">CHOOSE YOUR LANE</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocols | Ninth Wave</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
 
-        <div class="sector-divider"></div>
-        <div class="badge-biz" style="border-color: var(--matrix-green); color: var(--matrix-green);">SECTOR: BUSINESS</div>
-        <h2 style="font-family:'Playfair Display', serif; font-size:2.5em; color:#fff; margin-top:0;">THE GREEN LIGHT AUDIT</h2>
-        <p style="font-size:1.1em; max-width: 800px;">
-            Your "Sales Promise" and your "Operations Reality" are not speaking. It is costing you retention. We audit the "Air Gap."
-        </p>
+        :root {
+            --matrix-green: #00FFFF;
+            --spirit-purple: #5D3FD3;
+            --hybrid-teal: #C0C0C0;
+            --bg-black: #000000;
+            --card-bg: #0a0a0a;
+            --text-main: #e0e0e0;
+        }
 
-        <div class="grid-container">
-            <div class="card">
-                <h3>1. THE STUPID BUTTON</h3>
-                <p><strong>(Process Friction)</strong></p>
-                <p>Where does your process force smart people to do dumb things? We identify and delete legacy code.</p>
-            </div>
-            <div class="card">
-                <h3>2. THE HANDOFF FUMBLE</h3>
-                <p><strong>(The Gap)</strong></p>
-                <p>Where does Sales drop the ball before Ops picks it up? We align the "Sold Dream" with the "Trained Reality."</p>
-            </div>
-            <div class="card">
-                <h3>3. THE GHOST PROTOCOL</h3>
-                <p><strong>(Psychological Safety)</strong></p>
-                <p>We install the "New Hire Hello"—a scripted, safety-building protocol for the first 48 hours.</p>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="contact.html" class="btn btn-primary">BOOK THE AUDIT</a>
-        </div>
-
-
-        <div class="sector-divider"></div>
-        <div class="badge-can" style="border-color: var(--spirit-purple); color: var(--spirit-purple);">SECTOR: HUMAN</div>
-        <h2 style="font-family:'Playfair Display', serif; font-size:2.5em; color:#fff; margin-top:0;">THE R-PROTOCOL</h2>
-        <p style="font-size:1.1em; max-width: 800px;">
-            You aren't broken. You are crashing because you are out of storage space.
-        </p>
-
-        <div class="grid-container">
-            <div class="card">
-                <h3>RESISTANCE</h3>
-                <p><strong>(The Stop)</strong></p>
-                <p>Identifying the "Jiggle." Stop adding force to a chaotic system.</p>
-            </div>
-            <div class="card">
-                <h3>RESONANCE</h3>
-                <p><strong>(The Sync)</strong></p>
-                <p>The Golden Ratio. Cooling the system so the solution selects itself.</p>
-            </div>
-            <div class="card">
-                <h3>RECREATE</h3>
-                <p><strong>(The Build)</strong></p>
-                <p>Architecting the void. Creating conditions for the new version to exist.</p>
-            </div>
-        </div>
+        body { background-color: var(--bg-black); color: var(--text-main); font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; font-size: 18px; overflow-x: hidden; }
         
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="shop.html" class="btn btn-ghost">ENTER THE ARMORY</a>
-        </div>
-
-    </div>
+        /* NAVIGATION */
+        .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid #222; box-sizing: border-box; }
+        .brand { font-family: 'Playfair Display', serif; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; font-size: 1.2em; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-link { font-family: 'Roboto', sans-serif; color: #888; text-decoration: none; text-transform: uppercase; font-weight: bold; font

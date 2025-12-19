@@ -4,7 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Channel | Ninth Wave</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --matrix-green: #00FFFF;
+            --spirit-purple: #5D3FD3;
+            --hybrid-teal: #C0C0C0;
+            --bg-black: #000000;
+            --text-main: #e0e0e0;
+        }
+
+        body { background-color: var(--bg-black); color: var(--text-main); font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; font-size: 18px; overflow-x: hidden; }
+        
+        /* NAVIGATION */
+        .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid #222; box-sizing: border-box; }
+        .brand { font-family: 'Playfair Display', serif; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; font-size: 1.2em; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-link { font-family: 'Roboto', sans-serif; color: #888; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.85em; letter-spacing: 1px; transition: 0.3s; }
+        .nav-link:hover { color: var(--matrix-green); }
+        .nav-link.active { color: #fff; border-bottom: 2px solid var(--spirit-purple); }
+
+        /* LAYOUT - INCREASED PADDING FOR MOBILE SPACING */
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 160px 20px 60px 20px; /* Increased top padding to 160px */
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .terminal-window {
+            width: 100%;
+            border: 1px solid #333;
+            padding: 40px;
+            background: #0a0a0a;
+            box-shadow: 0 0 20px rgba(93, 63, 211, 0.1);
+        }
+
+        /* TYPOGRAPHY */
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.5em; text-transform: uppercase; color: #fff; margin-bottom: 10px; line-height: 1.1; text-align: center; }
+        .sub-headline { font-family: 'Roboto', sans-serif; font-size: 1.1em; color: var(--matrix-green); margin-bottom: 30px; letter-spacing: 3px; text-transform: uppercase; font-weight: bold; text-align: center; }
+
+        /* BUTTONS */
+        .btn-primary { background: var(--spirit-purple); color: #fff; border: 1px solid var(--spirit-purple); display: block; width: 100%; padding: 20px; text-align: center; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; box-sizing: border-box; transition: 0.3s;}
+        .btn-primary:hover { background: transparent; color: var(--matrix-green); border-color: var(--matrix-green); }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            .top-nav { flex-direction: column; padding: 15px; background: #000; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px; }
+            .container { padding-top: 180px; } /* Even more padding on mobile to clear the stacked nav */
+        }
+    </style>
 </head>
 <body>
 
@@ -12,29 +67,29 @@
         <a href="index.html" class="brand">NINTH_WAVE_OPS</a>
         <div class="nav-links">
             <a href="protocols.html" class="nav-link">PROTOCOLS</a>
-            <a href="architect.html" class="nav-link">ARCHITECT</a>
+            <a href="architect.html" class="nav-link">MISSION</a>
             <a href="shop.html" class="nav-link">ARMORY</a>
             <a href="contact.html" class="nav-link active">SECURE_CH</a>
         </div>
     </nav>
 
-    <div class="container" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+    <div class="container">
         
         <div class="terminal-window">
-            <h1 class="glitch-text" style="font-size: 2.5em; text-align: center; margin-top:0;">SECURE CHANNEL</h1>
-            <div class="sub-headline" style="text-align: center; border:none; margin-bottom: 30px;">ENCRYPTED LINE OPEN</div>
+            <h1 class="glitch-text">SECURE CHANNEL</h1>
+            <div class="sub-headline">ENCRYPTED LINE OPEN</div>
 
-            <div style="margin-top:30px; border-top:1px dashed #333; padding-top:20px;">
+            <div style="margin-top:30px; border-top:1px dashed #333; padding-top:20px; text-align: center;">
                 <p style="color:#888; font-size:0.8em; margin-bottom: 5px;">DIRECT UPLINK:</p>
-                <p style="font-size:1.2em; font-weight:bold; color: #fff;">commandcenter@ninthwaveoperations.com</p>
+                <p style="font-size:1.1em; font-weight:bold; color: #fff; word-break: break-all;">commandcenter@ninthwaveoperations.com</p>
             </div>
 
-            <div style="margin-top:20px;">
+            <div style="margin-top:20px; text-align: center; margin-bottom: 40px;">
                 <p style="color:#888; font-size:0.8em; margin-bottom: 5px;">CURRENT LOCATION:</p>
                 <p style="color: var(--matrix-green);">[ REDACTED ] // Remote Operations</p>
             </div>
 
-            <a href="mailto:commandcenter@ninthwaveoperations.com" class="btn btn-primary" style="width:100%; text-align:center; box-sizing:border-box; display:block;">TRANSMIT MESSAGE</a>
+            <a href="mailto:commandcenter@ninthwaveoperations.com" class="btn btn-primary">TRANSMIT MESSAGE</a>
         </div>
 
     </div>
