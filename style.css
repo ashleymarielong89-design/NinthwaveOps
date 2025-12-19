@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-    /* NEW PALETTE: Midnight Violet & Quantum Blue */
-    --matrix-green: #00FFFF; /* Now Cyan/Blue */
-    --spirit-purple: #5D3FD3; /* Deep Violet */
+    /* NEW NINTH WAVE PALETTE */
+    --matrix-green: #00FFFF; /* Quantum Blue */
+    --spirit-purple: #5D3FD3; /* Midnight Violet */
     --hybrid-teal: #C0C0C0;  /* Silver */
     
     --bg-black: #000000;     /* True Void */
     --card-bg: #0a0a0a;      /* Almost Black */
-    --text-main: #e0e0e0;    /* Off-White */
+    --text-main: #e0e0e0;
 }
 
 body {
@@ -72,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 120px 20px 40px 20px; /* Added padding to clear the nav bar */
+    padding: 120px 20px 40px 20px;
 }
 
 /* TYPOGRAPHY */
@@ -96,10 +96,10 @@ h1 {
     font-weight: bold;
 }
 
-/* IMAGE FIXES - Prevents the giant eye issue */
+/* IMAGE FIXES */
 .logo-img {
     width: 150px; 
-    max-width: 40%; /* Ensures it doesn't overflow on small phones */
+    max-width: 40%; 
     height: auto;
     margin-bottom: 30px;
     border-radius: 50%;
@@ -167,5 +167,5 @@ h1 {
     .top-nav { flex-direction: column; padding: 15px; background: #000; }
     .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px;}
     h1 { font-size: 2.2em; }
-    .hero-center { padding-top: 140px; } /* Push content down so nav doesn't cover it */
+    .hero-center { padding-top: 140px; }
 }
