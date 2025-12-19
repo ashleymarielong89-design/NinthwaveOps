@@ -1,10 +1,171 @@
+/* --- THE NINTH WAVE: MASTER PROTOCOL (V2.0) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
 :root {
-    /* NEW NINTH WAVE PALETTE */
-    --matrix-green: #00FFFF; /* Quantum Blue (The Signal) */
-    --spirit-purple: #5D3FD3; /* Midnight Violet (The Deep) */
-    --hybrid-teal: #C0C0C0;  /* Silver (The Machine) */
+    /* NEW PALETTE: Midnight Violet & Quantum Blue */
+    --matrix-green: #00FFFF; /* Now Cyan/Blue */
+    --spirit-purple: #5D3FD3; /* Deep Violet */
+    --hybrid-teal: #C0C0C0;  /* Silver */
     
     --bg-black: #000000;     /* True Void */
-    --card-bg: #0a0a0a;      /* Slightly lighter black */
-    --text-main: #e0e0e0;
+    --card-bg: #0a0a0a;      /* Almost Black */
+    --text-main: #e0e0e0;    /* Off-White */
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-main);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+    box-sizing: border-box;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.nav-links { display: flex; gap: 30px; }
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    color: #888;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.nav-link:hover { color: var(--matrix-green); }
+.nav-link.active { color: #fff; border-bottom: 2px solid var(--spirit-purple); }
+
+/* LAYOUT */
+.container { max-width: 1000px; margin: 0 auto; padding: 140px 20px 60px 20px; }
+.hero-center {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 40px 20px; /* Added padding to clear the nav bar */
+}
+
+/* TYPOGRAPHY */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em; 
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 0px rgba(93, 63, 211, 0.4);
+}
+
+.sub-headline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    color: var(--matrix-green);
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* IMAGE FIXES - Prevents the giant eye issue */
+.logo-img {
+    width: 150px; 
+    max-width: 40%; /* Ensures it doesn't overflow on small phones */
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--spirit-purple);
+    box-shadow: 0 0 20px rgba(93, 63, 211, 0.3);
+}
+
+/* CARDS */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    padding: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: block;
+}
+.card:hover {
+    border-color: var(--matrix-green);
+    transform: translateY(-5px);
+}
+.card h3 { margin-top: 0; color: #fff; font-family: 'Playfair Display', serif; font-size: 1.5em; }
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.btn-primary {
+    background: var(--spirit-purple);
+    color: #fff;
+    border: 1px solid var(--spirit-purple);
+}
+.btn-primary:hover {
+    background: transparent;
+    color: var(--matrix-green);
+    border-color: var(--matrix-green);
+}
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #555;
+}
+.btn-ghost:hover {
+    border-color: var(--matrix-green);
+    color: var(--matrix-green);
+}
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+    .top-nav { flex-direction: column; padding: 15px; background: #000; }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px;}
+    h1 { font-size: 2.2em; }
+    .hero-center { padding-top: 140px; } /* Push content down so nav doesn't cover it */
 }
