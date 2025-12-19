@@ -9,49 +9,152 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap');
 
         :root {
+            /* NEW NINTH WAVE PALETTE */
             --matrix-green: #00FFFF; /* Quantum Blue */
             --spirit-purple: #5D3FD3; /* Midnight Violet */
             --hybrid-teal: #C0C0C0;  /* Silver */
-            --bg-black: #000000;
-            --card-bg: #0a0a0a;
+            
+            --bg-black: #000000;     /* True Void */
+            --card-bg: #0a0a0a;      /* Almost Black */
             --text-main: #e0e0e0;
         }
 
-        body { background-color: var(--bg-black); color: var(--text-main); font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; font-size: 18px; overflow-x: hidden; }
-        
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+
         /* NAVIGATION */
-        .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid #222; box-sizing: border-box; }
-        .brand { font-family: 'Playfair Display', serif; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; font-size: 1.2em; text-transform: uppercase; }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0,0,0,0.95);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+            box-sizing: border-box;
+        }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
         .nav-links { display: flex; gap: 30px; }
-        .nav-link { font-family: 'Roboto', sans-serif; color: #888; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.85em; letter-spacing: 1px; transition: 0.3s; }
+
+        .nav-link {
+            font-family: 'Roboto', sans-serif;
+            color: #888;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
         .nav-link:hover { color: var(--matrix-green); }
         .nav-link.active { color: #fff; border-bottom: 2px solid var(--spirit-purple); }
 
         /* LAYOUT */
         .container { max-width: 1000px; margin: 0 auto; padding: 140px 20px 60px 20px; }
+        
+        .glitch-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em; 
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 0px rgba(93, 63, 211, 0.4);
+            text-align: center;
+        }
 
-        /* TYPOGRAPHY */
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.5em; text-transform: uppercase; color: #fff; margin-bottom: 10px; line-height: 1.1; text-shadow: 2px 2px 0px rgba(93, 63, 211, 0.4); }
-        .sub-headline { font-family: 'Roboto', sans-serif; font-size: 1.1em; color: var(--matrix-green); margin-bottom: 30px; letter-spacing: 3px; text-transform: uppercase; font-weight: bold; }
+        .sub-headline {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1em;
+            color: var(--matrix-green);
+            margin-bottom: 50px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
 
         /* CARDS */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; width: 100%; }
-        .card { background: var(--card-bg); border: 1px solid #333; padding: 30px; transition: 0.3s; text-decoration: none; display: block; }
-        .card:hover { border-color: var(--matrix-green); transform: translateY(-5px); }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            padding: 30px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        .card:hover {
+            border-color: var(--matrix-green);
+            transform: translateY(-5px);
+        }
         .card h3 { margin-top: 0; color: #fff; font-family: 'Playfair Display', serif; font-size: 1.5em; }
 
         /* BUTTONS */
-        .btn { display: inline-block; padding: 15px 35px; text-transform: uppercase; font-weight: bold; text-decoration: none; margin-top: 20px; font-size: 0.9em; letter-spacing: 2px; transition: 0.3s; cursor: pointer; }
-        .btn-primary { background: var(--spirit-purple); color: #fff; border: 1px solid var(--spirit-purple); }
-        .btn-primary:hover { background: transparent; color: var(--matrix-green); border-color: var(--matrix-green); }
-        .btn-ghost { background: transparent; color: #fff; border: 1px solid #555; }
-        .btn-ghost:hover { border-color: var(--matrix-green); color: var(--matrix-green); }
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--spirit-purple);
+            color: #fff;
+            border: 1px solid var(--spirit-purple);
+        }
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--matrix-green);
+            border-color: var(--matrix-green);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #555;
+        }
+        .btn-ghost:hover {
+            border-color: var(--matrix-green);
+            color: var(--matrix-green);
+        }
 
         /* MOBILE FIXES */
         @media (max-width: 768px) {
             .top-nav { flex-direction: column; padding: 15px; background: #000; }
-            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px; }
-            h1 { font-size: 2.2em; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px;}
         }
     </style>
 </head>
@@ -69,18 +172,18 @@
 
     <div class="container">
         <h1 class="glitch-text">THE ARMORY</h1>
-        <div class="sub-headline">REALITY HACKING TOOLS</div>
+        <div class="sub-headline">SYSTEM EXPANSION TOOLS</div>
 
         <div class="grid-container">
             
             <div class="card">
-                <h3>REALITY ARCHITECTURE KIT</h3>
-                <p style="color:#888; font-size:0.9em;">[ DIGITAL DOWNLOAD // v1.0 ]</p>
-                <p>The manual for surviving a system crash. A 3-Module Workbook containing the proprietary tools we use to debug human operating systems.</p>
-                <ul style="color:#aaa; font-size:0.9em; padding-left:20px; margin-top:10px;">
-                    <li><strong>Module 1:</strong> Diagnostics (The Atom, Wet Skin Resilience).</li>
-                    <li><strong>Module 2:</strong> Tools (The Hat Rack, The System Log).</li>
-                    <li><strong>Module 3:</strong> Purpose (Terminal Velocity).</li>
+                <h3>R-PROTOCOL [EXPANSION KIT]</h3>
+                <p style="color: var(--matrix-green); font-size:0.8em; margin-bottom: 10px;">>> DIGITAL DOWNLOAD // V1.0</p>
+                <p>This is not a self-help book. It is a System Admin Tool. Designed for High Performers running high-voltage software on low-voltage hardware.</p>
+                <ul style="color:#aaa; font-size:0.9em; padding-left:20px; margin-top:15px; line-height: 1.8;">
+                    <li><strong>Phase 1:</strong> Stop the Thermal Runaway (Anxiety).</li>
+                    <li><strong>Phase 2:</strong> Clear the Cache (Old Stories).</li>
+                    <li><strong>Phase 3:</strong> Install the Expansion (Capacity).</li>
                 </ul>
                 <br>
                 <div style="font-size:1.5em; color:#fff; font-weight:bold; margin-bottom:10px; font-family:'Playfair Display', serif;">$27.00</div>
@@ -89,19 +192,19 @@
 
             <div class="card">
                 <h3>THE NINTH WAVE APP</h3>
-                <p style="color:#888; font-size:0.9em;">[ SOFTWARE WAITLIST ]</p>
-                <p>Daily tracking for decision latency and resistance loops. Get on the Alpha testing list.</p>
+                <p style="color: var(--spirit-purple); font-size:0.8em; margin-bottom: 10px;">>> SOFTWARE ALPHA WAITLIST</p>
+                <p>Daily tracking for Decision Latency and Resistance Loops. We are building the tool to track your "Glitch" data points.</p>
                 <br>
                 <a href="mailto:commandcenter@ninthwaveoperations.com?subject=Waitlist" class="btn btn-ghost">JOIN WAITLIST</a>
             </div>
 
             <div class="card">
-                <h3>CONSULT CREDIT</h3>
-                <p style="color:#888; font-size:0.9em;">[ 1 HOUR DEPLOYMENT ]</p>
-                <p>Pre-purchase a single hour of Tactical Strategy. Direct access to The Architect for rapid problem solving.</p>
+                <h3>TACTICAL STRATEGY</h3>
+                <p style="color: var(--hybrid-teal); font-size:0.8em; margin-bottom: 10px;">>> 1 HOUR DIRECT UPLINK</p>
+                <p>Pre-purchase a single hour of Tactical Strategy. Direct access to The Architect for rapid problem solving, resume hacking, or trauma-informed leadership advice.</p>
                 <br>
                 <div style="font-size:1.5em; color:#fff; font-weight:bold; margin-bottom:10px; font-family:'Playfair Display', serif;">$150.00</div>
-                <a href="contact.html" class="btn btn-primary">INQUIRE</a>
+                <a href="contact.html" class="btn btn-primary">REQUEST TIME</a>
             </div>
 
         </div>
